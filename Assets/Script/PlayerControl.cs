@@ -5,9 +5,12 @@ using UnityEngine;
 public class PlayerControl : MonoBehaviour
 {
     public Animator ainm;
-
-    public void Attack()
+    public void Attack_Down()
     {
-        ainm.SetTrigger("Attack");
+        ainm.SetBool("Attack",true);
+    }
+    public void Attack_Up()
+    {
+        ainm.SetBool("Attack", false);
     }
 }
